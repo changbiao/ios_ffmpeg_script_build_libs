@@ -1,0 +1,14 @@
+prefix=compiled/i386
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 3.82.102
+Requires: libswresample = 0.17.103, libswscale = 2.5.100, libavformat = 55.14.102, libavcodec = 55.29.100, libavutil = 52.42.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavfilter -liconv -lm -lbz2 -lz
+Libs.private: 
+Cflags: -I${includedir}
